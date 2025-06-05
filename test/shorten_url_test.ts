@@ -1,20 +1,6 @@
+import { assertEquals, assert } from "./asserts.ts";
 import { ShortenUrl } from "../src/usecase/shorten_url.ts";
 import { MemoryUrlRepository } from "../src/infra/memory_url_repository.ts";
-
-// ShortenUrlの動作を検証するテスト
-
-function assert(
-  condition: unknown,
-  msg = "Assertion failed",
-): asserts condition {
-  if (!condition) throw new Error(msg);
-}
-
-function assertEquals(actual: unknown, expected: unknown) {
-  if (actual !== expected) {
-    throw new Error(`Expected ${expected}, got ${actual}`);
-  }
-}
 
 // 短縮URLが取得できることを確認
 Deno.test("returns shortened url and can retrieve original", async () => {
