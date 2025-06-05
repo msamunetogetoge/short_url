@@ -31,6 +31,11 @@ export class MemoryUrlRepository implements UrlRepository {
     return this.idToUrl.get(id) ?? null;
   }
 
+  // 保存されているURLの数を返す
+  async count(): Promise<number> {
+    return this.idToUrl.size;
+  }
+
   // 数値IDを62進数の文字列に変換する
   encode(num: number): string {
     if (num === 0) return BASE62[0];

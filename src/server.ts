@@ -12,6 +12,11 @@ router
     ctx.response.type = "text/plain";
     ctx.response.body = "I'm Fine";
   })
+  .get("/count", async (ctx) => {
+    const count = await useCase.count();
+    ctx.response.headers.set("Content-Type", "application/json");
+    ctx.response.body = { count };
+  })
   .post("/shorten", async (ctx) => {
     const body = ctx.request.body({ type: "json" });
     const { url: original } = await body.value;
