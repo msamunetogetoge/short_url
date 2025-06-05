@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "esnext"],
+    "lib": [
+      "dom",
+      "esnext"
+    ],
     "strict": true
-  }
+  },
+  "importMap": "./import_map.json"
 }
