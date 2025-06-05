@@ -1,9 +1,10 @@
 # Short URL Service
 
-Initial setup using Deno and Vitest following Clean Architecture principles.
+Initial setup using Deno following Clean Architecture principles.
 
 ## Scripts
 
-- `npm test` - run unit tests with Vitest.
+- `deno test` - run unit tests.
 
-This project is intended to be run with Deno but uses Vitest for unit testing.
+This project is intended to be run with Deno.
+
