@@ -8,6 +8,10 @@ const useCase = new ShortenUrl(repo);
 const router = new Router();
 
 router
+  .get("/healthcheck", (ctx) => {
+    ctx.response.type = "text/plain";
+    ctx.response.body = "I'm Fine";
+  })
   .post("/shorten", async (ctx) => {
     const body = ctx.request.body({ type: "json" });
     const { url: original } = await body.value;
@@ -31,4 +35,5 @@ const app = new Application();
 app.use(router.routes());
 app.use(router.allowedMethods());
 
+console.log("Server running on http://localhost:8000");
 await app.listen({ port: 8000 });
