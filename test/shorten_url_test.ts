@@ -33,3 +33,15 @@ Deno.test("encode and decode numbers correctly", () => {
     assertEquals(repo.decode(code), i);
   }
 });
+
+// count メソッドが保存されているURL数を返すことを確認
+Deno.test("returns count of stored urls", async () => {
+  const repo = new MemoryUrlRepository();
+  const useCase = new ShortenUrl(repo);
+  const urls = ["https://a.com", "https://b.com"];
+  for (const url of urls) {
+    await useCase.execute(url);
+  }
+  const count = await useCase.count();
+  assertEquals(count, urls.length);
+});

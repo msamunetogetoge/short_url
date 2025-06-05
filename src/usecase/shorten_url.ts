@@ -11,4 +11,9 @@ export class ShortenUrl {
   async resolve(code: string): Promise<string | null> {
     return await this.repository.find(code);
   }
+
+  // 保存されているURLの数を返す
+  async count(): Promise<number> {
+    return await this.repository.count();
+  }
 }

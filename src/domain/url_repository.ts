@@ -4,4 +4,6 @@ export interface UrlRepository {
   save(url: string): Promise<string>;
   // 短縮コードから元のURLを取得する
   find(short: string): Promise<string | null>;
+  // 保存されているURLの数を返す
+  count(): Promise<number>;
 }
