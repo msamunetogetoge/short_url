@@ -2,5 +2,8 @@
   "compilerOptions": {
     "lib": ["deno.ns", "dom", "esnext"],
     "strict": true
+  },
+  "imports": {
+    "@oak/oak": "jsr:@oak/oak@^17.1.4"
   }
 }
