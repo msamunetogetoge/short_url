@@ -1,4 +1,4 @@
-import { assertEquals, assert } from "./asserts.ts";
+import { assertEquals, assert } from "https://deno.land/std/assert/mod.ts";
 import { ShortenUrl } from "../src/usecase/shorten_url.ts";
 import { MemoryUrlRepository } from "../src/infra/memory_url_repository.ts";
 
