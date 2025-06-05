@@ -3,12 +3,11 @@
 
 Simple URL shortening service using Deno.
 
-## Testing
+Initial setup using Deno following Clean Architecture principles.
 
 Run the unit tests with Deno:
 
-```sh
-deno test
-```
+- `deno test` - run unit tests.
 
-All tests are written using Deno's built-in test runner.
+This project is intended to be run with Deno.
+
